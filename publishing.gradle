@@ -40,8 +40,8 @@ publishing {
           }
           licenses {
             license {
-              name 'The MIT License'
-              url 'http://opensource.org/licenses/MIT'
+              name 'Apache 2.0 License'
+              url 'https://www.apache.org/licenses/LICENSE-2.0'
               distribution 'repo'
             }
           }
@@ -58,7 +58,7 @@ bintray {
   pkg {
     repo = 'libs'
     name = 'android-chunk-utils'
-    licenses = ['MIT']
+    licenses = ['Apache-2.0']
     vcsUrl = 'https://github.com/madisp/android-chunk-utils'
 
     version {
