@@ -1,0 +1,73 @@
+apply plugin: 'maven-publish'
+apply plugin: 'com.jfrog.bintray'
+
+publishing {
+  publications {
+    pluginMaven(MavenPublication) {
+      from components.java
+      pom.withXml {
+        // ewwww, fix the runtime deps into compile deps
+        asNode().dependencies.'*'.findAll() {
+          it.scope.text() == 'runtime' && project.configurations.compile.allDependencies.find { dep ->
+            dep.name == it.artifactId.text()
+          }
+        }.each() {
+          it.scope*.value = 'compile'
+        }
+
+        // add extra metadata into the POM
+        asNode().children().last() + {
+          resolveStrategy = Closure.DELEGATE_FIRST
+          packaging 'jar'
+          name 'android-chunk-utils'
+          description 'Android Chunk format reader/writer'
+          url 'http://github.com/madisp/android-chunk-utils'
+          scm {
+            url 'http://github.com/madisp/android-chunk-utils'
+            connection 'scm:git:git://github.com/madisp/android-chunk-utils.git'
+            developerConnection 'scm:git:ssh://git@github.com/madisp/android-chunk-utils.git'
+          }
+          issueManagement {
+            system 'GitHub'
+            url 'http://github.com/madisp/android-chunk-utils/issues'
+          }
+          developers {
+            developer {
+              id 'madisp'
+              name 'Madis Pink'
+              email 'madis.pink@gmail.com'
+            }
+          }
+          licenses {
+            license {
+              name 'The MIT License'
+              url 'http://opensource.org/licenses/MIT'
+              distribution 'repo'
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+bintray {
+  user = 'madisp'
+  bintray.publications = ['pluginMaven']
+  key = project.properties['BINTRAY_KEY'] ?: ''
+  pkg {
+    repo = 'libs'
+    name = 'android-chunk-utils'
+    licenses = ['MIT']
+    vcsUrl = 'https://github.com/madisp/android-chunk-utils'
+
+    version {
+      name = project.version
+      desc = 'Android Chunk format reader/writer'
+      released = new Date()
+      vcsTag = "release-${project.version}"
+    }
+  }
+}
+
+bintrayUpload.dependsOn jar

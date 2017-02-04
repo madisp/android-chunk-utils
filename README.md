@@ -8,6 +8,8 @@ present in APK files.
 
 The following modifications have been made:
 
+* Deleted `ArscBlamer`, `ArscDumper`, `ArscModule`, `ResourceEntryStatsCollector`,
+  `InjectedApplication`, `BindingAnnotations` and `CommonParams`
 * The package has been renamed to `pink.madis.apk.arsc` to avoid collisions
 
 License
