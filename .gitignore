@@ -1,0 +1,5 @@
+/.idea/
+/.gradle/
+*.iml
+*.swp
+/build/
