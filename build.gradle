@@ -47,4 +47,8 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
   from javadoc.destinationDir
 }
 
+build {
+  dependsOn sourcesJar, javadocJar
+}
+
 apply from: file('publishing.gradle')

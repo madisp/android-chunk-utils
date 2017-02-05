@@ -7,6 +7,7 @@ publishing {
       from components.java
       artifact sourcesJar
       artifact javadocJar
+
       pom.withXml {
         // ewwww, fix the runtime deps into compile deps
         asNode().dependencies.'*'.findAll() {
@@ -72,4 +73,4 @@ bintray {
   }
 }
 
-bintrayUpload.dependsOn jar
+bintrayUpload.dependsOn build

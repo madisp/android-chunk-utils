@@ -58,5 +58,5 @@ sh("git commit -m 'Bump development version to #{next_version}'")
 sh("git push --tags")
 # ship
 sh("git checkout 'release-#{version}'")
-sh("./gradlew clean jar generatePomFileForPluginMavenPublication bintrayUpload")
+sh("./gradlew clean build generatePomFileForPluginMavenPublication bintrayUpload")
 sh("git checkout master")
