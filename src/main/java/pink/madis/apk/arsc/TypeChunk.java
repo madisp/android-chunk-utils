@@ -144,7 +144,7 @@ public final class TypeChunk extends Chunk {
 
   /**
    * Overrides an entry at the given index. Passing null for the {@code entry} will remove that
-   * entry from {@code entries}. Indices < 0 or >= {@link #getTotalEntryCount()} are a no-op.
+   * entry from {@code entries}. Indices &lt; 0 or &gt;= {@link #getTotalEntryCount()} are a no-op.
    *
    * @param index The 0-based index for the entry to override.
    * @param entry The entry to override, or null if the entry should be removed at this location.

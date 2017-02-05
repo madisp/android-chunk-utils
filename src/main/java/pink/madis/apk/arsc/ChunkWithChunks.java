@@ -55,7 +55,7 @@ public abstract class ChunkWithChunks extends Chunk {
   /**
    * Retrieves the @{code chunks} contained in this chunk.
    *
-   * @return map of buffer offset -> chunk contained in this chunk.
+   * @return map of buffer offset -&gt; chunk contained in this chunk.
    */
   public final Map<Integer, Chunk> getChunks() {
     return chunks;

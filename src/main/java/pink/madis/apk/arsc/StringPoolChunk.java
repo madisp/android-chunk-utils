@@ -115,7 +115,7 @@ public final class StringPoolChunk extends Chunk {
    * Returns a string at the given (0-based) index.
    *
    * @param index The (0-based) index of the string to return.
-   * @throws IndexOutOfBoundsException If the index is out of range (index < 0 || index >= size()).
+   * @throws IndexOutOfBoundsException If the index is out of range (index &lt; 0 || index &gt;= size()).
    */
   public String getString(int index) {
     return strings.get(index);
@@ -130,7 +130,7 @@ public final class StringPoolChunk extends Chunk {
    * Returns a style at the given (0-based) index.
    *
    * @param index The (0-based) index of the style to return.
-   * @throws IndexOutOfBoundsException If the index is out of range (index < 0 || index >= size()).
+   * @throws IndexOutOfBoundsException If the index is out of range (index &lt; 0 || index &gt;= size()).
    */
   public StringPoolStyle getStyle(int index) {
     return styles.get(index);
