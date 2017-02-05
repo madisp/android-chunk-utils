@@ -1,6 +1,8 @@
 Android Chunk format reader/writer
 ==================================
 
+[![Build Status](https://travis-ci.org/madisp/android-chunk-utils.svg?branch=master)](https://travis-ci.org/madisp/android-chunk-utils)
+
 This project contains classes extracted from the
 [android-arscblamer](https://github.com/google/android-arscblamer) project
 that deal with reading and writing the resource table and compiled XML files
