@@ -31,6 +31,7 @@ import javax.annotation.Nullable;
 
 /** A package chunk is a collection of resource data types within a package. */
 public final class PackageChunk extends ChunkWithChunks {
+  private static final int KNOWN_HEADER_SIZE = 284;
 
   /** Offset in bytes, from the start of the chunk, where {@code typeStringsOffset} can be found. */
   private static final int TYPE_OFFSET_OFFSET = 268;
@@ -56,8 +57,9 @@ public final class PackageChunk extends ChunkWithChunks {
   /** The index into the key string pool of the last public key. */
   private final int lastPublicKey;
 
-  /** An offset to the type ID(s). This is undocumented in the original code. */
-  private final int typeIdOffset;
+  /** Extra blob data in the header. On API 21 and later this will contain at least
+   * the typeIdOffset as the first 4 bytes and could potentially contain more data. */
+  private final byte[] headerBlob;
 
   /** Contains a mapping of a type index to its {@link TypeSpecChunk}. */
   private final Map<Integer, TypeSpecChunk> typeSpecs = new HashMap<>();
@@ -73,7 +75,13 @@ public final class PackageChunk extends ChunkWithChunks {
     lastPublicType = buffer.getInt();
     keyStringsOffset = buffer.getInt();
     lastPublicKey = buffer.getInt();
-    typeIdOffset = buffer.getInt();
+
+    // if we have any extra bytes then read them
+    int blobSz = getHeaderSize() - KNOWN_HEADER_SIZE;
+    Preconditions.checkState(blobSz >= 0, String.format(
+        "Header smaller than expected! Expected: %d got: %d", KNOWN_HEADER_SIZE, getHeaderSize()));
+    headerBlob = new byte[blobSz];
+    buffer.get(headerBlob, 0, blobSz);
   }
 
   @Override
@@ -182,7 +190,7 @@ public final class PackageChunk extends ChunkWithChunks {
     output.putInt(lastPublicType);
     output.putInt(0);  // keyStringsOffset. This value can't be computed here.
     output.putInt(lastPublicKey);
-    output.putInt(typeIdOffset);
+    output.put(headerBlob);
   }
 
   @Override

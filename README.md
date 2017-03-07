@@ -14,6 +14,7 @@ The following modifications have been made:
   `InjectedApplication`, `BindingAnnotations`, `CommonParams` and `ApkUtils`
 * The package has been renamed to `pink.madis.apk.arsc` to avoid collisions
 * Fixed `<` and `>` characters in javadoc
+* Fixed reading/writing resource packages generated with older aapt versions
 
 License
 -------
