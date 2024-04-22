@@ -17,6 +17,7 @@
 package pink.madis.apk.arsc;
 
 import com.google.auto.value.AutoValue;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.DataOutput;
 import java.io.IOException;
@@ -24,8 +25,6 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.annotation.Nullable;
 
 /**
  * Contains a list of package-id to package name mappings for any shared libraries used in this

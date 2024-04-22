@@ -21,6 +21,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableMap.Builder;
 import com.google.common.io.LittleEndianDataOutputStream;
 import com.google.common.primitives.Shorts;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutput;
@@ -28,8 +29,6 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.Map;
-
-import javax.annotation.Nullable;
 
 /** Represents a generic chunk. */
 public abstract class Chunk implements SerializableResource {

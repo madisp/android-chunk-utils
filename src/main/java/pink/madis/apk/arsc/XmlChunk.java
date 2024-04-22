@@ -16,9 +16,9 @@
 
 package pink.madis.apk.arsc;
 
-import java.nio.ByteBuffer;
+import org.jetbrains.annotations.Nullable;
 
-import javax.annotation.Nullable;
+import java.nio.ByteBuffer;
 
 /**
  * Represents an XML chunk structure.

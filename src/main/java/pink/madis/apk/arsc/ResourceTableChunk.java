@@ -17,14 +17,13 @@
 package pink.madis.apk.arsc;
 
 import com.google.common.base.Preconditions;
+import org.jetbrains.annotations.Nullable;
 
 import java.nio.ByteBuffer;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-
-import javax.annotation.Nullable;
 
 /**
  * Represents a resource table structure. Its sub-chunks contain:

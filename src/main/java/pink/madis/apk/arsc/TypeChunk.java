@@ -20,6 +20,7 @@ import com.google.auto.value.AutoValue;
 import com.google.common.base.Preconditions;
 import com.google.common.io.LittleEndianDataOutputStream;
 import com.google.common.primitives.UnsignedBytes;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutput;
@@ -30,8 +31,6 @@ import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.TreeMap;
-
-import javax.annotation.Nullable;
 
 /**
  * Represents a type chunk, which contains the resource values for a specific resource type and

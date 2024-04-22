@@ -17,6 +17,7 @@
 package pink.madis.apk.arsc;
 
 import com.google.common.base.Preconditions;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.DataOutput;
 import java.io.IOException;
@@ -24,8 +25,6 @@ import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import javax.annotation.Nullable;
 
 /** Represents the beginning of an XML node. */
 public final class XmlStartElementChunk extends XmlNodeChunk {
