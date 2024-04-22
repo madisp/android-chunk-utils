@@ -2,8 +2,10 @@
 autovalue = "1.10.4"
 guava = "33.1.0-android"
 annotations = "24.1.0"
+maven-publish = "0.28.0"
 
 [plugins]
+maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "maven-publish" }
 
 [libraries]
 autovalue-compiler = { module = "com.google.auto.value:auto-value", version.ref = "autovalue" }
