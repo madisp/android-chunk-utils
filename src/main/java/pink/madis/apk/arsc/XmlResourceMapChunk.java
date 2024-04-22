@@ -16,13 +16,13 @@
 
 package pink.madis.apk.arsc;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.io.DataOutput;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.annotation.Nullable;
 
 /**
  * Represents an XML resource map chunk.

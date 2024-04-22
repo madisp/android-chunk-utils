@@ -16,9 +16,9 @@
 
 package pink.madis.apk.arsc;
 
-import java.nio.ByteBuffer;
+import org.jetbrains.annotations.Nullable;
 
-import javax.annotation.Nullable;
+import java.nio.ByteBuffer;
 
 /** The common superclass for the various types of XML nodes. */
 public abstract class XmlNodeChunk extends Chunk {

@@ -16,11 +16,11 @@
 
 package pink.madis.apk.arsc;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.io.DataOutput;
 import java.io.IOException;
 import java.nio.ByteBuffer;
-
-import javax.annotation.Nullable;
 
 /**
  * A chunk whose contents are unknown. This is a placeholder until we add a proper chunk for the

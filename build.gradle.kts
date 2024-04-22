@@ -6,7 +6,7 @@ dependencies {
   annotationProcessor(libs.autovalue.compiler)
   implementation(libs.autovalue.annotations)
   implementation(libs.guava)
-  implementation(libs.findbugs.jsr305)
+  implementation(libs.jb.annotations)
 }
 
 java {

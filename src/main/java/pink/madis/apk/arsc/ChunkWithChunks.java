@@ -16,13 +16,13 @@
 
 package pink.madis.apk.arsc;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.io.DataOutput;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.LinkedHashMap;
 import java.util.Map;
-
-import javax.annotation.Nullable;
 
 /** Represents a chunk whose payload is a list of sub-chunks. */
 public abstract class ChunkWithChunks extends Chunk {

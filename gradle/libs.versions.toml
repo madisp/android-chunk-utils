@@ -1,7 +1,7 @@
 [versions]
 autovalue = "1.10.4"
-guava = "18.0"
-jsr305 = "3.0.1"
+guava = "33.1.0-android"
+annotations = "24.1.0"
 
 [plugins]
 
@@ -9,4 +9,4 @@ jsr305 = "3.0.1"
 autovalue-compiler = { module = "com.google.auto.value:auto-value", version.ref = "autovalue" }
 autovalue-annotations = { module = "com.google.auto.value:auto-value-annotations", version.ref = "autovalue" }
 guava = { module = "com.google.guava:guava", version.ref = "guava" }
-findbugs-jsr305 = { module = "com.google.code.findbugs:jsr305", version.ref = "jsr305" }
+jb-annotations = { module = "org.jetbrains:annotations", version.ref = "annotations" }

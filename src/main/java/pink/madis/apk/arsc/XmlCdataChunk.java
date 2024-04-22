@@ -16,11 +16,11 @@
 
 package pink.madis.apk.arsc;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.io.DataOutput;
 import java.io.IOException;
 import java.nio.ByteBuffer;
-
-import javax.annotation.Nullable;
 
 /** Represents an XML cdata node. */
 public final class XmlCdataChunk extends XmlNodeChunk {
