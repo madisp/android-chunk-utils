@@ -1,0 +1,12 @@
+[versions]
+autovalue = "1.10.4"
+guava = "18.0"
+jsr305 = "3.0.1"
+
+[plugins]
+
+[libraries]
+autovalue-compiler = { module = "com.google.auto.value:auto-value", version.ref = "autovalue" }
+autovalue-annotations = { module = "com.google.auto.value:auto-value-annotations", version.ref = "autovalue" }
+guava = { module = "com.google.guava:guava", version.ref = "guava" }
+findbugs-jsr305 = { module = "com.google.code.findbugs:jsr305", version.ref = "jsr305" }
