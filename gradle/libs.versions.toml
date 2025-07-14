@@ -2,7 +2,7 @@
 autovalue = "1.11.0"
 guava = "33.4.8-android"
 annotations = "26.0.2"
-maven-publish = "0.33.0"
+maven-publish = "0.34.0"
 
 [plugins]
 maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "maven-publish" }
