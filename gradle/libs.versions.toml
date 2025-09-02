@@ -1,7 +1,7 @@
 [versions]
 autovalue = "1.11.0"
 guava = "33.4.8-android"
-annotations = "26.0.2"
+annotations = "26.0.2-1"
 maven-publish = "0.34.0"
 
 [plugins]
