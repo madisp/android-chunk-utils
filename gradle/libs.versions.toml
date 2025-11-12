@@ -1,5 +1,5 @@
 [versions]
-autovalue = "1.11.0"
+autovalue = "1.11.1"
 guava = "33.5.0-android"
 annotations = "26.0.2-1"
 maven-publish = "0.34.0"
