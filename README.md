@@ -15,6 +15,7 @@ The following modifications have been made:
 * The package has been renamed to `pink.madis.apk.arsc` to avoid collisions
 * Fixed `<` and `>` characters in javadoc
 * Fixed reading/writing resource packages generated with older aapt versions
+* Fixed modified UTF-8 string encoding/decoding.
 
 License
 -------
